@@ -1,0 +1,63 @@
+﻿@{
+    var parameterValue = ViewData["Parameter"] as string;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functies</title>
+</head>
+<body>
+    <center>
+        <h1>Een pagina met functies</h1>
+        <h4>1. Parameter-checker</h4>
+        <p><i>De waarde van de parameter is: @parameterValue</i></p>
+
+        <h4>2. Getallen optellen</h4>
+        <form method="post" action="@Url.Action("Optellen")">
+            <div>
+                <label for="num1">Getal 1:</label>
+                <input type="number" id="num1" name="num1" />
+            </div>
+            <div>
+                <label for="num2">Getal 2:</label>
+                <input type="number" id="num2" name="num2" />
+            </div>
+            <div>
+                <input type="submit" value="Optellen" />
+            </div>
+        </form>
+
+        @if (ViewData["Result"] != null)
+        {
+            <p class="resultaat">Resultaat van de optelling: @ViewData["Result"]</p>
+        }
+    </center>
+</body>
+</html>
+
+<style>
+    p {
+        color: black;
+    }
+
+    h1 {
+        color: red;
+    }
+
+    h4 {
+        color: black;
+    }
+
+    label {
+        color: black;
+    }
+
+    input[type="submit"] {
+        margin-top: 45px;
+    }
+
+    p.resultaat {
+        margin-top: -65px;
+    }
+</style>

@@ -1,0 +1,27 @@
+﻿@model List<Postzegel>
+
+<h1>Mijn Postzegels</h1>
+
+<form asp-controller="Postzegels" asp-action="FilterFavorieten" method="post">
+    <button type="submit">Filter op Favorieten</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Naam</th>
+            <th>Is Favoriet</th>
+            <!-- Andere kolommen -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var postzegel in Model)
+        {
+            <tr>
+                <td>@postzegel.Id</td>
+                <td>@(postzegel.IsFavoriet ? "Ja" : "Nee")</td>
+                <!-- Andere kolommen -->
+            </tr>
+        }
+    </tbody>
+</table>
