@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp_TestApp_W3_InlvrOpdr", "WebApp_TestApp_W3_InlvrOpdr\WebApp_TestApp_W3_InlvrOpdr.csproj", "{B7B1AF06-B589-4A5E-8BF2-69EC9C1C784D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp_TestApp_W3_InlvrOpdr", "WebApp_TestApp_W3_InlvrOpdr\WebApp_TestApp_W3_InlvrOpdr.csproj", "{B7B1AF06-B589-4A5E-8BF2-69EC9C1C784D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerzamelWoedeAPI", "VerzamelWoedeAPI\VerzamelWoedeAPI.csproj", "{F1C3CACD-C201-430B-A4E6-CE9819454606}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B7B1AF06-B589-4A5E-8BF2-69EC9C1C784D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7B1AF06-B589-4A5E-8BF2-69EC9C1C784D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7B1AF06-B589-4A5E-8BF2-69EC9C1C784D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1C3CACD-C201-430B-A4E6-CE9819454606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1C3CACD-C201-430B-A4E6-CE9819454606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1C3CACD-C201-430B-A4E6-CE9819454606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1C3CACD-C201-430B-A4E6-CE9819454606}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
