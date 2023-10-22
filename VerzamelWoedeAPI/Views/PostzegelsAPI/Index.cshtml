@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebApp_TestApp_W3_InlvrOpdr.Models.Postzegel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LandVanHerkomst)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Conditie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uitgiftejaar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Waarde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eigenaar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsFavoriet)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LandVanHerkomst)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Conditie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uitgiftejaar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Waarde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eigenaar.Gebruikersnaam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsFavoriet)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

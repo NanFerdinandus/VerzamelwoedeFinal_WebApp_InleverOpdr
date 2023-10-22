@@ -1,0 +1,57 @@
+﻿@model WebApp_TestApp_W3_InlvrOpdr.Models.Postzegel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Postzegel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LandVanHerkomst" class="control-label"></label>
+                <input asp-for="LandVanHerkomst" class="form-control" />
+                <span asp-validation-for="LandVanHerkomst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Conditie" class="control-label"></label>
+                <input asp-for="Conditie" class="form-control" />
+                <span asp-validation-for="Conditie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uitgiftejaar" class="control-label"></label>
+                <input asp-for="Uitgiftejaar" class="form-control" />
+                <span asp-validation-for="Uitgiftejaar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Waarde" class="control-label"></label>
+                <input asp-for="Waarde" class="form-control" />
+                <span asp-validation-for="Waarde" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsFavoriet" /> @Html.DisplayNameFor(model => model.IsFavoriet)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="EigenaarId" class="control-label"></label>
+                <select asp-for="EigenaarId" class ="form-control" asp-items="ViewBag.EigenaarId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
